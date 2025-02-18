@@ -9,29 +9,29 @@ include "koneksi.php";
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Login Aplikasi To Do List</title>
+        <title>Login To Do List</title>
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-green">
+    <body class="bg-secondary">
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
                 <main>
                     <div class="container">
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header bg-info"><h3 class="text-center font-weight- my-4">LOGIN</h3></div>
-                                    <div class="card-body bg-info">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5 ">
+                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login To Do List</h3></div>
+                                    <div class="card-body">
                                         <?php
                                         if(isset($_POST['login'])) {
                                             $username = $_POST['username'];
                                             $password = md5($_POST['password']);
 
-                                            $data = mysqli_query($koneksi, "SELECT*FROM user where username='$username' and password='$password'");
+                                            $data = mysqli_query($koneksi, "SELECT*FROM users where username='$username' and password='$password'");
                                             $cek = mysqli_num_rows($data);
                                             if($cek > 0 ){
-                                                $_SESSION['user'] = mysqli_fetch_array($data);
+                                                $_SESSION['users'] = mysqli_fetch_array($data);
                                                 echo '<script>alert("Selamat datang, Login Berhasil"); location.href="index.php";</script>';
                                             }else{
                                                 echo '<script>alert("Maaf, Username/Password salah")</script>';
@@ -55,7 +55,7 @@ include "koneksi.php";
                                     </div>
                                     <div class="card-footer text-center py-3">
                                         <div class="small">
-                                            &copy; To Do List.
+                                            &copy; 2025 To Do List.
                                         </div>
                                     </div>
                                 </div>
