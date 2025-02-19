@@ -56,9 +56,9 @@
                                                 <label class="small mb-1" for="inputname">Name</label>
                                                 <input class="form-control py 4" type="name" required name ="name" placeholder="Masukkan Name" />    
                                             </div>
-                                            <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                <button class="btn btn-primary" type="submit" name="register" value="register">Register</a>
-                                                <a class="btn btn-danger "href="login.php">Login</a>
+                                            <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                                 <button class="btn btn-secondary" type="submit" name="login" value="login">Login</button>
+                                                <a class="btn btn-secondary" href="login.php">Register</a>
                                             </div>
                                         </form>
                                     </div>

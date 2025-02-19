@@ -1,4 +1,4 @@
-<h1 class="mt-4">Kategori Buku</h1>
+<h1 class="mt-4">Tugas</h1>
 <div class="row">
     <div class="col-md-12">
         <form method="post">

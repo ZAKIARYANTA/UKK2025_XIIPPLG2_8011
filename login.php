@@ -48,8 +48,8 @@ include "koneksi.php";
                                                 <label for="inputPassword">Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                 <button class="btn btn-primary" type="submit" name="login" value="login">Login</button>
-                                                <a class="btn btn-danger" href="register.php">Register</a>
+                                                 <button class="btn btn-secondary" type="submit" name="login" value="login">Login</button>
+                                                <a class="btn btn-secondary" href="register.php">Register</a>
                                             </div>
                                         </form>
                                     </div>

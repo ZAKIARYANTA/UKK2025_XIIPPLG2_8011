@@ -1,36 +1,48 @@
-<h1 class="mt-4">Kategori Buku</h1>
-<div class="card">
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-12">
-                <form method="post">
-                    <?php
-                        if(isset($_POST['submit'])) {
-                            $kategori = $_POST['kategori'];
-                            $query = mysqli_query($koneksi, "INSERT INTO kategori(kategori) VALUES('$kategori')");
+<?php
+    if(isset($_POST['category'])) {
+        $category= $_POST['category'];
+        $id = $_POST['id'];
+        $user_id = $_POST['user_id'];
 
-                            if($query) {
-                                echo '<script>alert("Tambah data berhasil.");</script>';
-                                echo '<script>window.location.href = "?page=kategori&id_buku=' . $id_buku . '";</script>';
-                            }else{
-                                echo '<script>alert("Tambah data gagal.");</script>';
-                            }
-                        }
-                    ?>  
-                    <div class="row mb-3">
-                        <div class="col-md-2">Nama Kategori</div>
-                        <div class="col-md-8"><input type="text" class="form-control" name="kategori"></div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-8">
-                            <button type="submit" class="btn btn-outline-secondary" name="submit" value="submit">Simpan</button>
-                            <button type="reset" class="btn btn-outline-secondary">Reset</button>
-                            <a href="?page=kategori" class="btn btn-outline-secondaryr">Kembali</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+    $query = mysqli_query($koneksi, "INSERT INTO categories(id,category,user_id) values('$id','$category','$user_id')");
+
+        if($query) {
+        echo '<script>alert("Tambah Data Berhasil")</script>';
+        }else{
+        echo '<script>alert("Tambah Data Gagal")</script>';
+        }
+    }
+
+?>
+
+<div class="container-fluid">
+    <h1 class="mt-4">Categories</h1>
+        <a href="?page=kategori" class="btn btn-secondary">kembali</a>
+            <form method="post">
+                <table class="table table-bordered">
+                    <tr>
+                        <td width="200">id</td>
+                        <td width="1">:</td>
+                        <td><input class="form-control" type="text" name="id"></td>
+                    </tr>
+                    <tr>
+                        <td>Categories</td>
+                        <td>:</td>
+                        <td>
+                            <textarea name="category" rows="5" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user_id</td>
+                        <td>:</td>
+                        <td><input class="form-control" type="number" step="0" name="user_id"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" class="btn btn-secondary" name="submit" value="submit" >Simpan</button>
+                            <button type="reset" class="btn btn-secondary">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
 </div>
