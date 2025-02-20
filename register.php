@@ -25,21 +25,20 @@
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Register To Do List</h3></div>
                                     <div class="card-body">
                                         <?php
-                                          if(isset($_POST[ 'register'])) {
-                                            $username = $_POST['username'];
-                                            $email = $_POST['email'];
-                                            $password = md5($_POST['password']);
-                                            $name = $_POST['name'];
-
-                                            $insert = mysqli_query($koneksi, "INSERT INTO users(username,email,password,name) VALUES('$username','$email','$password','$name')");
-
-                                            if($insert){
-                                                echo '<script>alert("Selamat, register berhasil. Silahkan login");location.href="login.php"</script>';
-                                            }else{
-                                                echo '<script>alert("Registrasi gagal, silahkan langi kembali");</script>';
-                                            }
-                                          }
-                                        ?>
+                                         if(isset($_POST[ 'register'])) {
+                                          $username = $_POST['username'];
+                                           $password = md5($_POST['password']);
+                                         $email = $_POST['email'];
+                                       $name = $_POST['name'];
+                                        $insert = mysqli_query($koneksi, "INSERT INTO users(username,password,email,name) VALUES('$username','$password','$email','$name')");
+                                        if($insert){
+                                        echo '<script>alert("Selamat, Register berhasil. Silahkan Login"); location.href="login.php"</script>';
+                                        }else{
+                                       echo '<script>alert("Register gagal, silahkan ulangi kembali");</script>';
+                                                                                    }
+                                                                                  }
+                                                                                ?>
+                                       
                                         <form method="post">
                                         <div class="form-group">
                                                 <label class="small mb-1" for="inputEmailAddress">Username</label>
@@ -57,8 +56,8 @@
                                                 <input class="form-control py 4" type="name" required name ="name" placeholder="Masukkan Name" />    
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                                 <button class="btn btn-secondary" type="submit" name="login" value="login">Login</button>
-                                                <a class="btn btn-secondary" href="login.php">Register</a>
+                                                 <button class="btn btn-secondary" type="submit" name="register" value="login">Register</button>
+                                                <a class="btn btn-secondary" href="login.php">Login</a>
                                             </div>
                                         </form>
                                     </div>

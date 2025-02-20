@@ -16,7 +16,7 @@
                     <a class="small text-white stretched-link" href="?page=kategori">View Details</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
-            </div>0
+            </div>
         </div>
         <div class="col-xl-3 col-md-5>
         </div>

@@ -3,13 +3,13 @@
     <div class="card-body">
         <div class="row">
             <div class="col-md-12">
-                <a href="?page=tasks_tambah" class="btn btn-outline-primary">+ Tambah Data</a>
+                <a href="?page=tasks_tambah" class="btn btn-outline-secondary">+ Tambah Data</a>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <tr>
-                        <th>Categories</th>
-                        <th>Tasks</th>
-                        <th>User</th>
-                        <th>Status</th>
+                        <th div class= bg-secondary>Tasks</th>
+                        <th div class= bg-secondary>Category</th>
+                        <th div class= bg-secondary>Priority</th>
+                        <th div class= bg-secondary>Status</th>
                     </tr>
                     <?php
                     $i = 1;

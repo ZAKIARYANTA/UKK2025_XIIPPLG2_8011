@@ -21,7 +21,7 @@ include "koneksi.php";
                         <div class="row justify-content-center">
                             <div class="col-lg-5">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5 ">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login To Do List</h3></div>
+                                    <div class="card-header-bg-secondary" ><h3 class="text-center font-weight-light my-4">Login</h3></div>
                                     <div class="card-body">
                                         <?php
                                         if(isset($_POST['login'])) {
@@ -55,7 +55,7 @@ include "koneksi.php";
                                     </div>
                                     <div class="card-footer text-center py-3">
                                         <div class="small">
-                                            &copy; 2025 To Do List.
+                                            &copy; My To Do List.
                                         </div>
                                     </div>
                                 </div>
